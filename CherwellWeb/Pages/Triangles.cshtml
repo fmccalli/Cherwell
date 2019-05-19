@@ -1,0 +1,154 @@
+﻿@page
+@model CherwellWeb.Pages.TrianglesModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Triangles</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#getRowColumn").click(function () {
+                var form = $("#triangleForm");
+
+                if (form[0].checkValidity() === true) {
+                    $.ajax({
+                        url: '@Url.Content("~/")Triangles',
+                        type: 'post',
+                        data: $("#triangleForm").serialize(),
+                        success: function (response) {
+                            var html = '<p>The triagle is at row:' + response.row + ' col:' + response.col + '</p>';
+                            $("#triangleRowColDiv").html(html);
+                        },
+                        error: function (e, status, thrown) {
+                            alert('Failure - ' + thrown);
+                        }
+                    });
+                }
+                form.addClass('was-validated');
+            });
+        });
+        function draw() {
+            var canvas = document.getElementById('trianglesCanvas');
+            if (canvas.getContext) {
+                var ctx = canvas.getContext('2d');
+            }
+
+            for (let row = 'A'.charCodeAt(0); row <= 'F'.charCodeAt(0); row++) {
+                for (col = 1; col <= 12; col++) {
+                    $.ajax({
+                        url: '@Url.Content("~/")Triangles?handler=Triangle',
+                        type: 'get',
+                        data: {
+                            row: String.fromCharCode(row),
+                            col: col,
+                        },
+                        success: function (response) {
+                            ctx.beginPath();
+                            ctx.moveTo(response.vertex1.x, response.vertex1.y);
+                            ctx.lineTo(response.vertex2.x, response.vertex2.y);
+                            ctx.lineTo(response.vertex3.x, response.vertex3.y);
+                            ctx.fillStyle = "lightblue";
+                            ctx.fill();
+                        },
+
+                        error: function (e, status, thrown) {
+                            alert('Failure - ' + thrown);
+                        }
+                    });
+                }
+            }
+        }
+
+        //# sourceURL=Trianglesjs
+    </script>
+
+    <style type="text/css">
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+
+    <body onload="draw();">
+        <div class="container-fluid">
+
+            <form id="triangleForm" method="post" class="form-horizontal">
+                @Html.AntiForgeryToken()
+                <br />
+                <br />
+                <div style="text-align: center">
+                    <h4>Triangle Drawing Area</h4>
+                    <canvas id="trianglesCanvas" width="60" height="60"></canvas>
+                </div>
+                <br />
+                <br />
+
+                <h5>Enter the coordinates for the vertex of the right angle of the triangle</h5>
+                <div class="form-group row">
+                    <div class="col-lg-2 col-md-2 col-sm-2">
+                        <label class="col-form-label col-form-label-sm font-weight-bold" for="Vertex1x">X Coordinate</label>
+                        <input class="form-control form-control-sm" id="Vertex1x" name="Vertex1x" type="number" step="10" min="0" max="60" required />
+                        <div class="invalid-feedback col-form-label col-lg-12 font-weight-bold">Invalid number.</div>
+
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-2">
+                        <label class="col-form-label col-form-label-sm font-weight-bold" for="Vertex1y">Y Coordinate</label>
+                        <input class="form-control form-control-sm" id="Vertex1y" name="Vertex1y" type="number" step="10" min="0" max="60" required />
+                        <div class="invalid-feedback col-form-label col-lg-12 font-weight-bold">Invalid number.</div>
+                    </div>
+
+                </div>
+
+                <h5>Enter the coordinates for the vertex of the upper left angle of the triangle</h5>
+                <div class="form-group row">
+                    <div class="col-lg-2 col-md-2 col-sm-2">
+                        <label class="col-form-label col-form-label-sm font-weight-bold" for="Vertex2x">X Coordinate</label>
+                        <input class="form-control form-control-sm" id="Vertex2x" name="Vertex2x" type="number" step="10" min="0" max="60" required />
+                        <div class="invalid-feedback col-form-label col-lg-12 font-weight-bold">Invalid number.</div>
+
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-2">
+                        <label class="col-form-label col-form-label-sm font-weight-bold" for="Vertex2y">Y Coordinate</label>
+                        <input class="form-control form-control-sm" id="Vertex2y" name="Vertex2y" type="number" step="10" min="0" max="60" required />
+                        <div class="invalid-feedback col-form-label col-lg-12 font-weight-bold">Invalid number.</div>
+                    </div>
+
+                </div>
+
+                <h5>Enter the coordinates for the vertex of the lower right angle of the triangle</h5>
+                <div class="form-group row">
+                    <div class="col-lg-2 col-md-2 col-sm-2">
+                        <label class="col-form-label col-form-label-sm font-weight-bold" for="Vertex3x">X Coordinate</label>
+                        <input class="form-control form-control-sm" id="Vertex3x" name="Vertex3x" type="number" step="10" min="0" max="60" required />
+                        <div class="invalid-feedback col-form-label col-lg-12 font-weight-bold">Invalid number.</div>
+
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-2">
+                        <label class="col-form-label col-form-label-sm font-weight-bold" for="Vertex3y">Y Coordinate</label>
+                        <input class="form-control form-control-sm" id="Vertex3y" name="Vertex3y" type="number" step="10" min="0" max="60" required />
+                        <div class="invalid-feedback col-form-label col-lg-12 font-weight-bold">Invalid number.</div>
+                    </div>
+
+                </div>
+                <button id="getRowColumn" type="button" class="btn btn-primary">Get Row Column</button>
+                <br />
+                <br />
+                <div id="triangleRowColDiv"></div>
+            </form>
+        </div>
+
+    </body>
+</html>

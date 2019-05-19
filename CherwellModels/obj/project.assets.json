@@ -692,11 +692,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fmcca\\source\\repos\\Cherwell\\CherwellModels\\CherwellModels.csproj",
+      "projectUniqueName": "C:\\Code\\Cherwell\\CherwellModels\\CherwellModels.csproj",
       "projectName": "CherwellModels",
-      "projectPath": "C:\\Users\\fmcca\\source\\repos\\Cherwell\\CherwellModels\\CherwellModels.csproj",
+      "projectPath": "C:\\Code\\Cherwell\\CherwellModels\\CherwellModels.csproj",
       "packagesPath": "C:\\Users\\fmcca\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fmcca\\source\\repos\\Cherwell\\CherwellModels\\obj\\",
+      "outputPath": "C:\\Code\\Cherwell\\CherwellModels\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

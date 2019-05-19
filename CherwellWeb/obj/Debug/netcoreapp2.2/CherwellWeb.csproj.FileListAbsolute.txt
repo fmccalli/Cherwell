@@ -93,3 +93,11 @@ C:\Users\fmcca\source\repos\Cherwell\CherwellWeb\obj\Debug\netcoreapp2.2\Cherwel
 C:\Users\fmcca\source\repos\Cherwell\CherwellWeb\obj\Debug\netcoreapp2.2\CherwellWeb.csproj.CopyComplete
 C:\Users\fmcca\source\repos\Cherwell\CherwellWeb\bin\Debug\netcoreapp2.2\CherwellModels.dll
 C:\Users\fmcca\source\repos\Cherwell\CherwellWeb\bin\Debug\netcoreapp2.2\CherwellModels.pdb
+C:\Code\Cherwell\CherwellWeb\obj\Debug\netcoreapp2.2\CherwellWeb.csprojAssemblyReference.cache
+C:\Code\Cherwell\CherwellWeb\obj\Debug\netcoreapp2.2\CherwellWeb.csproj.CoreCompileInputs.cache
+C:\Code\Cherwell\CherwellWeb\obj\Debug\netcoreapp2.2\CherwellWeb.RazorAssemblyInfo.cache
+C:\Code\Cherwell\CherwellWeb\obj\Debug\netcoreapp2.2\CherwellWeb.RazorAssemblyInfo.cs
+C:\Code\Cherwell\CherwellWeb\obj\Debug\netcoreapp2.2\CherwellWeb.AssemblyInfoInputs.cache
+C:\Code\Cherwell\CherwellWeb\obj\Debug\netcoreapp2.2\CherwellWeb.AssemblyInfo.cs
+C:\Code\Cherwell\CherwellWeb\obj\Debug\netcoreapp2.2\CherwellWeb.dll
+C:\Code\Cherwell\CherwellWeb\obj\Debug\netcoreapp2.2\CherwellWeb.pdb

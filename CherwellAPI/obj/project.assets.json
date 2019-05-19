@@ -12205,11 +12205,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fmcca\\source\\repos\\Cherwell\\CherwellAPI\\CherwellAPI.csproj",
+      "projectUniqueName": "C:\\Code\\Cherwell\\CherwellAPI\\CherwellAPI.csproj",
       "projectName": "CherwellAPI",
-      "projectPath": "C:\\Users\\fmcca\\source\\repos\\Cherwell\\CherwellAPI\\CherwellAPI.csproj",
+      "projectPath": "C:\\Code\\Cherwell\\CherwellAPI\\CherwellAPI.csproj",
       "packagesPath": "C:\\Users\\fmcca\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fmcca\\source\\repos\\Cherwell\\CherwellAPI\\obj\\",
+      "outputPath": "C:\\Code\\Cherwell\\CherwellAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12228,8 +12228,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\fmcca\\source\\repos\\Cherwell\\CherwellModels\\CherwellModels.csproj": {
-              "projectPath": "C:\\Users\\fmcca\\source\\repos\\Cherwell\\CherwellModels\\CherwellModels.csproj"
+            "C:\\Code\\Cherwell\\CherwellModels\\CherwellModels.csproj": {
+              "projectPath": "C:\\Code\\Cherwell\\CherwellModels\\CherwellModels.csproj"
             }
           }
         }

@@ -7,3 +7,12 @@ C:\Users\fmcca\source\repos\Cherwell\CherwellModels\obj\Debug\netcoreapp2.2\Cher
 C:\Users\fmcca\source\repos\Cherwell\CherwellModels\obj\Debug\netcoreapp2.2\CherwellModels.AssemblyInfo.cs
 C:\Users\fmcca\source\repos\Cherwell\CherwellModels\obj\Debug\netcoreapp2.2\CherwellModels.dll
 C:\Users\fmcca\source\repos\Cherwell\CherwellModels\obj\Debug\netcoreapp2.2\CherwellModels.pdb
+C:\Code\Cherwell\CherwellModels\bin\Debug\netcoreapp2.2\CherwellModels.deps.json
+C:\Code\Cherwell\CherwellModels\bin\Debug\netcoreapp2.2\CherwellModels.dll
+C:\Code\Cherwell\CherwellModels\bin\Debug\netcoreapp2.2\CherwellModels.pdb
+C:\Code\Cherwell\CherwellModels\obj\Debug\netcoreapp2.2\CherwellModels.csprojAssemblyReference.cache
+C:\Code\Cherwell\CherwellModels\obj\Debug\netcoreapp2.2\CherwellModels.csproj.CoreCompileInputs.cache
+C:\Code\Cherwell\CherwellModels\obj\Debug\netcoreapp2.2\CherwellModels.AssemblyInfoInputs.cache
+C:\Code\Cherwell\CherwellModels\obj\Debug\netcoreapp2.2\CherwellModels.AssemblyInfo.cs
+C:\Code\Cherwell\CherwellModels\obj\Debug\netcoreapp2.2\CherwellModels.dll
+C:\Code\Cherwell\CherwellModels\obj\Debug\netcoreapp2.2\CherwellModels.pdb
